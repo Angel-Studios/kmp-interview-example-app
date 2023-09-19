@@ -3,7 +3,7 @@
 ### Android
 
 ```
-./gradlew assembleDebug
+./gradlew installDebug
 ```
 
 ### Web
