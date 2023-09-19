@@ -1,0 +1,101 @@
+[versions]
+
+# App
+versionCode = "1"
+versionName = "1.0.0"
+
+# Android SDK
+android-compileSdk = "33"
+android-gradlePlugin = "8.0.0"
+android-minSdk = "26"
+android-targetSdk = "31"
+
+# AndroidX / Jetpack
+androidx-activity = "1.7.0"
+
+# Kotlin
+kotlin = "1.8.20"
+kotlinx-coroutines = "1.6.4"
+kotlinx-datetime = "0.3.2"
+kotlinx-serialization = "1.3.0"
+kotlinx-coroutines-test = "1.5.1"
+kotlinx-html = "0.8.0"
+
+# Koin
+koin = "3.3.2"
+koin-android = "3.3.2"
+koin-compose = "3.4.1"
+
+# Other dependencies
+coil = "1.4.0"
+compose = "1.4.0"
+apollo = "3.7.2"
+dokka = "1.7.0"
+ktlint = "0.47.1"
+versionsPlugin = "0.42.0"
+
+##################################################################################################################################
+
+[libraries]
+
+# Gradle Plugins
+gradle-android = { module = "com.android.tools.build:gradle", version.ref = "android-gradlePlugin" }
+gradle-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
+gradle-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-ktlint = { module = "com.pinterest:ktlint", version.ref = "ktlint" }
+
+# AndroidX / Jetpack
+androidx-activity = { module = "androidx.activity:activity-ktx", version.ref = "androidx-activity" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
+
+# Compose
+compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+
+# Apollo
+apollo-api = { module = "com.apollographql.apollo3:apollo-api", version.ref = "apollo" }
+apollo-runtime = { module = "com.apollographql.apollo3:apollo-runtime", version.ref = "apollo" }
+
+# Kotlin
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+kotlin-test-annotations-common = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common", version.ref = "kotlin" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+kotlinx-serialization-properties = { module = "org.jetbrains.kotlinx:kotlinx-serialization-properties", version.ref = "kotlinx-serialization" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+kotlinx-html = { module = "org.jetbrains.kotlinx:kotlinx-html", version.ref = "kotlinx-html" }
+
+# Koin
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin-android" }
+koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin-compose" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+
+# Other dependencies
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+
+##################################################################################################################################
+
+[bundles]
+
+androidx = [
+    "androidx-activity",
+    "compose-activity"
+]
+
+compose = [
+    "compose-animation",
+    "compose-foundation",
+    "compose-material",
+    "compose-ui"
+]
+
+koin = [
+    "koin-android",
+    "koin-compose",
+    "koin-core"
+]
