@@ -1,6 +1,6 @@
 package com.example.kmpInterview.model
 
-import com.example.apolloJsLockup.graphql.rocketreserver.LaunchListQuery
+import com.example.kmpInterview.graphql.rocketreserver.LaunchListQuery
 
 data class Launch(
     val id: Int, // TODO change this field to be the rocket name instead

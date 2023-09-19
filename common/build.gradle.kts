@@ -34,7 +34,7 @@ apollo {
         generateAsInternal.set(true)
         alwaysGenerateTypesMatching.set(listOf(".*"))
         sourceFolder.set("rocketreserver")
-        packageName.set("com.example.apolloJsLockup.graphql.rocketreserver")
+        packageName.set("com.example.kmpInterview.graphql.rocketreserver")
         useSemanticNaming.set(true)
     }
 }

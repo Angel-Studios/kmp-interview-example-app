@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.compose") version libs.versions.compose.get()
 }
 
-group = "com.example.apolloJsLockup"
+group = "com.example.kmpInterview"
 version = "1.0-SNAPSHOT"
 
 repositories {

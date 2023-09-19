@@ -2,7 +2,7 @@ package com.example.kmpInterview.api
 
 import com.apollographql.apollo3.ApolloClient
 import com.apollographql.apollo3.api.Optional
-import com.example.apolloJsLockup.graphql.rocketreserver.LaunchListQuery
+import com.example.kmpInterview.graphql.rocketreserver.LaunchListQuery
 import com.example.kmpInterview.model.Launch
 import com.example.kmpInterview.model.mapToLaunch
 import kotlinx.coroutines.flow.Flow
