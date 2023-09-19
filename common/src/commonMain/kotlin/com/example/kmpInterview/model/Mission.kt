@@ -7,7 +7,7 @@ data class Mission(
     val missionPatch: String?,
 )
 
-internal fun LaunchListQuery.Mission.toMission() = Mission(
+internal fun LaunchListQuery.Mission.mapToMission() = Mission(
     name = this.name,
     missionPatch = this.missionPatch,
 )

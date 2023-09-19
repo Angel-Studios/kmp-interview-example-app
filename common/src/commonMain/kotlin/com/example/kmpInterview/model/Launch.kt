@@ -8,8 +8,8 @@ data class Launch(
     val mission: Mission?,
 )
 
-internal fun LaunchListQuery.Launch.toLaunch() = Launch(
+internal fun LaunchListQuery.Launch.mapToLaunch() = Launch(
     id = this.id.toInt(),
     site = this.site,
-    mission = this.mission?.toMission(),
+    mission = this.mission?.mapToMission(),
 )
