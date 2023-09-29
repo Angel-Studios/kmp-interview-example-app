@@ -31,7 +31,7 @@ apollo {
         generateKotlinModels.set(true)
         schemaFile.set(file("./src/commonMain/graphql/rocketreserver/schema.graphqls"))
         generateApolloMetadata.set(true)
-        generateAsInternal.set(true)
+        generateAsInternal.set(false)
         alwaysGenerateTypesMatching.set(listOf(".*"))
         sourceFolder.set("rocketreserver")
         packageName.set("com.example.kmpInterview.graphql.rocketreserver")
