@@ -44,21 +44,21 @@ class MainActivity : ComponentActivity() {
                         .background(color = Color.White)
                 ) {
                     LazyColumn {
-                        items(launches) { launch ->
+                        items(listOf(1, 2, 3)) { launch ->
                             Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .padding(8.dp)
                             ) {
                                 Image(
-                                    painter = rememberImagePainter(data = launch.mission?.missionPatch),
+                                    painter = rememberImagePainter(data = "https://example.com/image.jpg"),
                                     contentDescription = "Mission Patch",
                                     modifier = Modifier.size(64.dp)
                                 )
                                 Column {
-                                    Text("ID: ${launch.id}")
-                                    Text("Site: ${launch.site}")
-                                    Text("Mission: ${launch.mission?.name}")
+                                    Text("ID: $launch")
+                                    Text("Site: $launch")
+                                    Text("Mission: $launch")
                                 }
                             }
                         }

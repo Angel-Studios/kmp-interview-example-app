@@ -2,7 +2,6 @@ package com.example.kmpInterview
 
 import com.example.kmpInterview.api.RocketReserverApi
 import com.example.kmpInterview.di.commonModule
-import com.example.kmpInterview.model.Launch
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -33,11 +32,13 @@ class MainPage : KoinComponent {
 
     fun writeAllLaunches() {
         scope.launch {
-            api.getLaunches().collect(::displayLaunches)
+            api.getLaunches().collect { launches ->
+                displayLaunches()
+            }
         }
     }
 
-    private fun displayLaunches(launches: List<Launch>) {
+    private fun displayLaunches() {
         renderComposable(rootElementId = "target") {
             Style(AppStylesheet)
 
@@ -47,16 +48,16 @@ class MainPage : KoinComponent {
                     Th { Text("Site") }
                     Th { Text("Mission") }
                 }
-                for (launch in launches) {
+                for (launch in listOf(1, 2, 3)) {
                     Tr {
-                        Td { Text(launch.id.toString()) }
-                        Td { Text(launch.site.orEmpty()) }
+                        Td { Text("$launch") }
+                        Td { Text("$launch") }
                         Td {
                             Img(
-                                src = launch.mission?.missionPatch.orEmpty(),
+                                src = "https://example.com/image.jpg",
                                 attrs = { classes(AppStylesheet.imgStyle) }
                             )
-                            Text(launch.mission?.name.orEmpty())
+                            Text("$launch")
                         }
                     }
                 }
