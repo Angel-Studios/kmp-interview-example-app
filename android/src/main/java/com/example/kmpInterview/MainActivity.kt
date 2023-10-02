@@ -22,7 +22,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import coil.compose.rememberImagePainter
+import coil.compose.rememberAsyncImagePainter
 import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {
@@ -51,14 +51,16 @@ class MainActivity : ComponentActivity() {
                                     .padding(8.dp)
                             ) {
                                 Image(
-                                    painter = rememberImagePainter(data = "https://example.com/image.jpg"),
+                                    painter = rememberAsyncImagePainter(
+                                        model = "https://example.com/image.jpg"
+                                    ),
                                     contentDescription = "Mission Patch",
                                     modifier = Modifier.size(64.dp)
                                 )
                                 Column {
                                     Text("ID: $launch")
                                     Text("Site: $launch")
-                                    Text("Mission: $launch")
+                                    Text("Mission Name: $launch")
                                 }
                             }
                         }

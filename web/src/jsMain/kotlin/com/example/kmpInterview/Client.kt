@@ -46,7 +46,7 @@ class MainPage : KoinComponent {
                 Tr {
                     Th { Text("ID") }
                     Th { Text("Site") }
-                    Th { Text("Mission") }
+                    Th { Text("Mission Name") }
                 }
                 for (launch in listOf(1, 2, 3)) {
                     Tr {

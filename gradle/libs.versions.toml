@@ -27,7 +27,7 @@ koin-android = "3.3.2"
 koin-compose = "3.4.1"
 
 # Other dependencies
-coil = "1.4.0"
+coil = "2.4.0"
 compose = "1.4.0"
 apollo = "3.7.2"
 dokka = "1.7.0"
