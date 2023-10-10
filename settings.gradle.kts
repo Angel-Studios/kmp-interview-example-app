@@ -1,4 +1,8 @@
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "Angel-KMP-Interview"
-include(":android", ":common", ":web")
+include(
+    ":android",
+    ":common",
+//    ":web"
+)

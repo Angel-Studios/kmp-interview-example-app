@@ -1,12 +1,24 @@
 ## KMP Interview Example App
 
-### Android
+### Setup
+
+Generate Apollo sources:
+
+```
+./gradlew common:generateApolloSources
+```
+
+### Installation
+
+#### Android
 
 ```
 ./gradlew installDebug
 ```
 
-### Web
+#### Web
+
+Uncomment the `web` module from settings.gradle.kts, then run:
 
 ```
 ./gradlew jsBrowserDevelopmentRun
