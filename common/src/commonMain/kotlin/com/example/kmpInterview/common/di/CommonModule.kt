@@ -1,8 +1,8 @@
-package com.example.kmpInterview.di
+package com.example.kmpInterview.common.di
 
 import com.apollographql.apollo.ApolloClient
-import com.example.kmpInterview.api.RocketReserverApi
-import com.example.kmpInterview.api.RocketReserverApiImpl
+import com.example.kmpInterview.common.api.RocketReserverApi
+import com.example.kmpInterview.common.api.RocketReserverApiImpl
 import org.koin.dsl.module
 
 val commonModule = module {

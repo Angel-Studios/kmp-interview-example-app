@@ -1,18 +1,18 @@
-package com.example.kmpInterview
+package com.example.kmpInterview.android
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.kmpInterview.api.RocketReserverApi
+import com.example.kmpInterview.common.api.RocketReserverApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 class MainViewModel(
     private val api: RocketReserverApi
 ) : ViewModel() {
     private val _launches = MutableStateFlow(Unit)
-    val launches: StateFlow<Unit> = _launches
+    val launches = _launches.asStateFlow()
 
     fun getLaunches() {
         viewModelScope.launch(Dispatchers.IO) {

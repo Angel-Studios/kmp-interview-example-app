@@ -1,4 +1,4 @@
-package com.example.kmpInterview
+package com.example.kmpInterview.web
 
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.LineStyle

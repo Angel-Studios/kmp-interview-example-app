@@ -1,7 +1,7 @@
-package com.example.kmpInterview
+package com.example.kmpInterview.web
 
-import com.example.kmpInterview.api.RocketReserverApi
-import com.example.kmpInterview.di.commonModule
+import com.example.kmpInterview.common.api.RocketReserverApi
+import com.example.kmpInterview.common.di.commonModule
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

@@ -1,10 +1,10 @@
-package com.example.kmpInterview
+package com.example.kmpInterview.android
 
 import android.app.Application
-import com.example.kmpInterview.di.androidModule
+import com.example.kmpInterview.android.di.androidModule
+import com.example.kmpInterview.common.di.commonModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
-import com.example.kmpInterview.di.commonModule
 
 class MainApplication : Application() {
     override fun onCreate() {

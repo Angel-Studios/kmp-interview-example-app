@@ -1,4 +1,4 @@
-package com.example.kmpInterview
+package com.example.kmpInterview.android
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.example.kmpInterview.R
 import coil.compose.rememberAsyncImagePainter
 import org.koin.android.ext.android.inject
 

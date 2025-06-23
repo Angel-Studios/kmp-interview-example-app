@@ -1,4 +1,4 @@
-package com.example.kmpInterview.api
+package com.example.kmpInterview.common.api
 
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.api.Optional
