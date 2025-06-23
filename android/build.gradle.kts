@@ -1,10 +1,9 @@
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
 
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id("com.android.application")
-    kotlin("multiplatform")
-    id("org.jetbrains.compose") version libs.versions.compose.get()
+    id("kotlin-android")
+    id("org.jetbrains.kotlin.plugin.compose") version libs.versions.kotlin.get()
 }
 
 android {
@@ -29,12 +28,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.get()
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     signingConfigs {
@@ -75,10 +70,6 @@ android {
     lint {
         abortOnError = false
     }
-}
-
-kotlin {
-    android()
 }
 
 dependencies {

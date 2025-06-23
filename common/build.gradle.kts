@@ -1,10 +1,7 @@
-import org.jetbrains.compose.compose
-
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version libs.versions.compose.get()
-    id("com.apollographql.apollo3") version libs.versions.apollo.get()
+    id("org.jetbrains.kotlin.plugin.compose") version libs.versions.kotlin.get()
+    id("com.apollographql.apollo") version libs.versions.apollo.get()
     id("maven-publish")
 }
 
@@ -18,7 +15,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(compose.runtime)
+                api(libs.compose.runtime)
                 implementation(libs.koin.core)
                 implementation(libs.apollo.runtime)
             }

@@ -1,6 +1,6 @@
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version libs.versions.compose.get()
+    id("org.jetbrains.kotlin.plugin.compose") version libs.versions.kotlin.get()
 }
 
 group = "com.example.kmpInterview"
@@ -28,11 +28,12 @@ kotlin {
             dependencies {
                 implementation(projects.common)
                 implementation(libs.kotlin.stdlib)
+                implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.kotlinx.html)
                 implementation(libs.koin.core)
-                implementation(compose.html.core)
-                implementation(compose.html.svg)
-                implementation(compose.runtime)
+                implementation(libs.compose.html.core)
+                implementation(libs.compose.html.svg)
+                implementation(libs.compose.runtime)
             }
         }
     }

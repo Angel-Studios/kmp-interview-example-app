@@ -16,7 +16,9 @@ class MainViewModel(
 
     fun getLaunches() {
         viewModelScope.launch(Dispatchers.IO) {
-            api.getLaunches().collect { launches -> }
+            api.getLaunches().collect { launches ->
+                // TODO bind API data to the UI
+            }
         }
     }
 }
