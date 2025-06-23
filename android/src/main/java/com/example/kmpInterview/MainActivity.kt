@@ -21,6 +21,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import org.koin.android.ext.android.inject
@@ -52,7 +53,8 @@ class MainActivity : ComponentActivity() {
                             ) {
                                 Image(
                                     painter = rememberAsyncImagePainter(
-                                        model = "https://example.com/image.jpg"
+                                        model = "https://example.com/image.jpg",
+                                        error = painterResource(R.drawable.ic_broken_image),
                                     ),
                                     contentDescription = "Mission Patch",
                                     modifier = Modifier.size(64.dp)
