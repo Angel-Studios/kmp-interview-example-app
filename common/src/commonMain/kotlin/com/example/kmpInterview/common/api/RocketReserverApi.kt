@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 interface RocketReserverApi {
-    fun getLaunches(): Flow<Unit>
+    fun getLaunches(): Flow<Unit> // TODO replace `Unit` with actual data type
 }
 
 internal class RocketReserverApiImpl(
